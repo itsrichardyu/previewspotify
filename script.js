@@ -10,7 +10,7 @@ function spotifyAuth() {
 	} else if (!accessToken) {
 		const authParams = {
 			"respType": "&response_type=token",
-			"redirUri": "&redirect_uri=https://crayonz420.github.io",
+			"redirUri": "&redirect_uri=https://crayonz420.github.io/spotify-chords/",
 			"clientId": ["&client_id=", clientId],
 			"scope": ["&scope=",
 				"streaming ",
