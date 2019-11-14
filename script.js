@@ -6,7 +6,7 @@ function spotifyAuth() {
 	accessToken = window.location.hash.substr(1).split('&')[0].split("=")[1]
 	
 	if (accessToken) {
-		document.getElementById("auth").innerHTML = "Already authorized!";
+		document.getElementById("auth").innerHTML = "Already authorized! " + accessToken;
 		globalAccessToken = accessToken;
 	} else if (!accessToken) {
 		const authParams = {
@@ -30,7 +30,7 @@ function refresh() {
 	//		headers: { "Content-Type": "application/x-www-form-urlencoded" }
 	//	}).then(console.log("hi"))
 	
-	const xhrAccessToken = "Bearer " + accessToken;
+	const xhrAccessToken = "Bearer " + globalAccessToken;
 	xhr.open("POST", "https://api.spotify.com/v1/me", true);
 	xhr.setRequestHeader("Authorization", xhrAccessToken);
 	xhr.send();
