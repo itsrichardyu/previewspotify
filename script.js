@@ -30,12 +30,8 @@ function refresh() {
 	//		headers: { "Content-Type": "application/x-www-form-urlencoded" }
 	//	}).then(console.log("hi"))
 	
-	const xhrBody = {
-		"grant-type": "authorization_code",
-		"code": "globalAccessToken",
-		"redirect_uri": "https://crayonz420.github.io/spotify-chords/"
-	}
-	xhr.open("POST", "https://accounts.spotify.com/api/token", true);
-	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	const xhrAccessToken = "Bearer" + accessToken;
+	xhr.open("POST", "https://api.spotify.com/v1/me", true);
+	xhr.setRequestHeader("Authorization", xhrAccessToken);
 	xhr.send(xhrBody);
 }
