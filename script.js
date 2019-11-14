@@ -24,14 +24,10 @@ function spotifyAuth() {
 }
 
 function refresh() {
-	//fetch("https://accounts.spotify.com/api/token", {
-	//		method: "POST",
-	//		body: "grant_type=authorization_code&code=globalAccessToken&redirect_uri=https://crayonz420.github.io/spotify-chords/",
-	//		headers: { "Content-Type": "application/x-www-form-urlencoded" }
-	//	}).then(console.log("hi"))
-	
 	const xhrAccessToken = "Bearer " + globalAccessToken;
-	xhr.open("GET", "https://api.spotify.com/v1/me/player/currently-playing", true);
+	xhr.open("GET", "https://api.spotify.com/v1/me/player/currently-playing", false);
 	xhr.setRequestHeader("Authorization", xhrAccessToken);
 	xhr.send();
+	let currentlyPlayingResp = xhr.getResponseHeader(currently-playing);
+	console.log(currentlyPlayingResp);
 }
