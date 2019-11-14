@@ -16,15 +16,25 @@ function spotifyAuth() {
 				"streaming ",
 				"user-read-currently-playing"
 				]
-		}
-		window.location.href = "https://accounts.spotify.com/authorize?" + authParams.respType + authParams.redirUri + authParams.clientId[0] + authParams.clientId[1] + authParams.scope[0] + authParams.scope[1] + authParams.scope[2];
+		};
+		let uriAuthParams = authParams.respType + authParams.redirUri + authParams.clientId[0] + authParams.clientId[1] + authParams.scope[0] + authParams.scope[1] + authParams.scope[2];
+		window.location.href = "https://accounts.spotify.com/authorize?" + uriAuthParams;
 	}
 }
 
 function refresh() {
-	fetch("https://accounts.spotify.com/api/token", {
-			method: "POST",
-			body: "grant_type=authorization_code&code=globalAccessToken&redirect_uri=https://crayonz420.github.io/spotify-chords/",
-			headers: { "Content-Type": "application/x-www-form-urlencoded" }
-		}).then(console.log("hi"))
+	//fetch("https://accounts.spotify.com/api/token", {
+	//		method: "POST",
+	//		body: "grant_type=authorization_code&code=globalAccessToken&redirect_uri=https://crayonz420.github.io/spotify-chords/",
+	//		headers: { "Content-Type": "application/x-www-form-urlencoded" }
+	//	}).then(console.log("hi"))
+	
+	const xhrBody = {
+		"grant-type": "authorization_code",
+		"code": "globalAccessToken",
+		"redirect_uri": "https://crayonz420.github.io/spotify-chords/"
+	}
+	xhttp.open("POST", "https://accounts.spotify.com/api/token", true);
+	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhttp.send(xhrBody);
 }
