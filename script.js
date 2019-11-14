@@ -27,7 +27,9 @@ function refresh() {
 	const xhrAccessToken = "Bearer " + globalAccessToken;
 	xhr.open("GET", "https://api.spotify.com/v1/me/player/currently-playing", false);
 	xhr.setRequestHeader("Authorization", xhrAccessToken);
-	xhr.send();
-	let currentlyPlayingResp = xhr.getResponseHeader("currently-playing");
-	console.log(currentlyPlayingResp);
+	xhr.send();	
+	if xhr.getAllResponseHeaders().indexOf("currently-playing") >= 0) {
+		let currentlyPlayingResp = xhr.getResponseHeader("currently-playing");
+		console.log(currentlyPlayingResp);
+	}
 }
