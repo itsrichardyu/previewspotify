@@ -31,7 +31,7 @@ function refresh() {
 	//	}).then(console.log("hi"))
 	
 	const xhrAccessToken = "Bearer " + globalAccessToken;
-	xhr.open("POST", "https://api.spotify.com/v1/me", true);
+	xhr.open("POST", "https://api.spotify.com/v1/me/playlists", true);
 	xhr.setRequestHeader("Authorization", xhrAccessToken);
 	xhr.send();
 }
