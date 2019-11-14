@@ -1,3 +1,4 @@
+const xhr = new XMLHttpRequest();
 const clientId = "2041601f364e4ccc9197c572b2f911d8";
 let globalAccessToken;
 
@@ -34,7 +35,7 @@ function refresh() {
 		"code": "globalAccessToken",
 		"redirect_uri": "https://crayonz420.github.io/spotify-chords/"
 	}
-	xhttp.open("POST", "https://accounts.spotify.com/api/token", true);
-	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhttp.send(xhrBody);
+	xhr.open("POST", "https://accounts.spotify.com/api/token", true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhr.send(xhrBody);
 }
