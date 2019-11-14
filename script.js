@@ -28,6 +28,6 @@ function refresh() {
 	xhr.open("GET", "https://api.spotify.com/v1/me/player/currently-playing", false);
 	xhr.setRequestHeader("Authorization", xhrAccessToken);
 	xhr.send();
-	let currentlyPlayingResp = xhr.getResponseHeader(currently-playing);
+	let currentlyPlayingResp = xhr.getResponseHeader("currently-playing");
 	console.log(currentlyPlayingResp);
 }
