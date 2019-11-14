@@ -33,5 +33,5 @@ function refresh() {
 	const xhrAccessToken = "Bearer" + accessToken;
 	xhr.open("POST", "https://api.spotify.com/v1/me", true);
 	xhr.setRequestHeader("Authorization", xhrAccessToken);
-	xhr.send(xhrBody);
+	xhr.send();
 }
