@@ -29,7 +29,6 @@ function refresh() {
 	xhr.setRequestHeader("Authorization", xhrAccessToken);
 	xhr.send();	
 	if (xhr.getAllResponseHeaders().indexOf("currently-playing") >= 0) {
-		let currentlyPlayingResp = xhr.getResponseHeader("currently-playing");
-		console.log(currentlyPlayingResp);
+		console.log(xhr.getResponseHeader("currently-playing"));
 	}
 }
