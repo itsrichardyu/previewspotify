@@ -26,7 +26,7 @@ function spotifyAuth() {
 function refresh() {
 	const xhrAccessToken = "Bearer " + globalAccessToken;
 	xhr.onreadystatechange = function() {
-		if (xhr.readyState == XMLHTTPRequest.DONE) {
+		if (xhr.readyState == xhr.DONE) {
 			console.log(xhr.responseText);
 		}
 	}
