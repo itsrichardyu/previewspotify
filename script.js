@@ -25,13 +25,12 @@ function spotifyAuth() {
 
 function refresh() {
 	const xhrAccessToken = "Bearer " + globalAccessToken;
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == XMLHTTPRequest.DONE) {
+			console.log(xhr.responseText);
+		}
+	}
 	xhr.open("GET", "https://api.spotify.com/v1/me/player/currently-playing", false);
 	xhr.setRequestHeader("Authorization", xhrAccessToken);
 	xhr.send();	
-	// Line 33: No errors, response header data not console logging
-	//if (xhr.getAllResponseHeaders().indexOf("currently-playing") >= 0) {
-	//	console.log(xhr.getResponseHeader("currently-playing"));
-	//}
-	// New code:
-	console.log(xhr.response());
 }
