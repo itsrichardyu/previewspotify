@@ -2,15 +2,39 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <title>Spotify</title>
   </head>
   <body>
-	<h1 id="auth" onclick="spotifyAuth()">Login with Spotify</h1>
-	<h1 onclick="refresh()">Refresh</h1>
-	<br>
-	<h1 id="songtitle">Song</h1>
-	<h3 id="albumtitle">Album</h3>
-	<h3 id="artistname">Artist</h3>
+	<div>
+		<ul id="navBar">
+			<li class="navBarItem-left"><a class="navBarLogo">Chords</a></li>
+			<li class="navBarItem-left"><a class="navBarItemLink" href="">Home</a></li>
+			<li class="navBarItem-left"><a class="navBarItemLink" href="https://github.com/crayonz420/" target="_blank">Source Code</a></li>
+			<li class="navBarItem-right" style="float:right;">Logout</li>
+		</ul>
+	</div>
+  
+	<div id="topSection">
+		<h1 id="auth" onclick="spotifyAuth()">Login with Spotify</h1>
+		<h1 onclick="refresh()">Refresh</h1>
+		<h6 id="authKey"></h6>
+	</div>
+	
+	<hr>
+	
+	<div id="currentlyPlaying">
+		<img id="albumImg" src="https://img.sheetmusic.direct/img/legacystructure/Global/placeholder.png">
+		<div id="songInfo">
+			<h1 id="songTitle">Not listening to any song.</h1>
+			<h3 id="albumTitle">Try refreshing?</h3>
+			<h3 id="artistNames"></h3>
+			<a id="spotifyListenLink" target="_blank"></h2>
+		</div>
+	</div>
+	
 	<script src="script.js"></script>
   </body>
 </html>

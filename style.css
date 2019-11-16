@@ -1,0 +1,101 @@
+/* Universal */
+html {
+	font-family: "Roboto Mono";
+}
+
+/* Navigation Bar Div */
+
+#navBar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+}
+
+.navBarItem-left {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+li.navBarItem-left:hover {
+	background-color: #313131;
+}
+
+.navBarItem-right {
+	float: right;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+li.navBarItem-right:hover {
+	background-color: #313131;
+}
+
+a.navBarLogo {
+	font-weight: bold;
+	color: white;
+}
+
+a.navBarItemLink {
+	color: white;
+}
+
+a.navBarItemLink:visited {
+	color: white;
+}
+
+/* Top Section */
+#topSection {
+	margin: 10px;
+}
+
+/* Song Info Section */
+#currentlyPlaying {
+	margin: 10px;
+}
+
+#songInfo {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#albumImg {
+	width: 200px;
+	height: 200px;
+	border: solid;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#albumTitle {
+	margin-top: -20px;
+}
+
+#artistNames {
+	margin-bottom: 30px;
+}
+
+#spotifyListenLink {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 300px;
+    color: #465d5d;
+}
