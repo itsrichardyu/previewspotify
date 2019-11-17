@@ -1,7 +1,6 @@
 /* Universal */
 html {
-	font-family: "Roboto Mono";
-	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Roboto Mono";
 }
 
 /* Navigation Bar Div */
